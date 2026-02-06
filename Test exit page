@@ -1,0 +1,236 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>goDialogue - KI-gestützte Avatar-Kommunikation</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            background: linear-gradient(180deg, #2a2a2a 0%, #e0e0e0 100%);
+            min-height: 100vh;
+            padding: 40px 20px;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+        }
+        header {
+            text-align: center;
+            color: white;
+            margin-bottom: 60px;
+        }
+        h1 {
+            font-size: 3em;
+            margin-bottom: 20px;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.3);
+        }
+        .subtitle {
+            font-size: 1.3em;
+            color: #f0f0f0;
+            margin-bottom: 10px;
+        }
+        .description {
+            font-size: 1.1em;
+            color: #d0d0d0;
+            max-width: 800px;
+            margin: 20px auto;
+            line-height: 1.6;
+        }
+        .pricing-section {
+            display: flex;
+            gap: 30px;
+            justify-content: center;
+            flex-wrap: wrap;
+            margin-top: 50px;
+        }
+        .pricing-card {
+            background: #f5f5f5;
+            border-radius: 12px;
+            padding: 40px 30px;
+            width: 350px;
+            box-shadow: 0 8px 20px rgba(0,0,0,0.2);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+        .pricing-card:hover {
+            transform: translateY(-10px);
+            box-shadow: 0 12px 30px rgba(0,0,0,0.3);
+        }
+        .pricing-card h2 {
+            color: #2563eb;
+            font-size: 1.8em;
+            margin-bottom: 15px;
+            text-align: center;
+        }
+        .price {
+            color: #1e40af;
+            font-size: 2.5em;
+            font-weight: bold;
+            text-align: center;
+            margin: 20px 0;
+        }
+        .price-suffix {
+            font-size: 0.4em;
+            color: #3b82f6;
+            display: block;
+        }
+        .additional-cost {
+            color: #3b82f6;
+            font-size: 0.9em;
+            text-align: center;
+            margin-bottom: 20px;
+            font-style: italic;
+        }
+        .features {
+            list-style: none;
+            margin: 30px 0;
+        }
+        .features li {
+            color: #4b5563;
+            padding: 12px 0;
+            border-bottom: 1px solid #e5e7eb;
+            font-size: 1em;
+            line-height: 1.5;
+        }
+        .features li:before {
+            content: "✓ ";
+            color: #2563eb;
+            font-weight: bold;
+            margin-right: 8px;
+        }
+        .features li:last-child {
+            border-bottom: none;
+        }
+        .highlight {
+            font-weight: bold;
+            color: #1e40af;
+        }
+        .cta-button {
+            display: block;
+            background: #2563eb;
+            color: white;
+            text-align: center;
+            padding: 15px 30px;
+            border-radius: 8px;
+            text-decoration: none;
+            font-weight: bold;
+            font-size: 1.1em;
+            margin-top: 25px;
+            transition: background 0.3s ease;
+        }
+        .cta-button:hover {
+            background: #1e40af;
+        }
+        .optional-note {
+            color: #6b7280;
+            font-size: 0.85em;
+            margin-top: 15px;
+            text-align: center;
+            font-style: italic;
+        }
+        .popular-badge {
+            background: #2563eb;
+            color: white;
+            padding: 8px 20px;
+            border-radius: 20px;
+            font-size: 0.85em;
+            display: inline-block;
+            margin-bottom: 15px;
+        }
+        @media (max-width: 768px) {
+            h1 {
+                font-size: 2em;
+            }
+            .pricing-card {
+                width: 100%;
+                max-width: 400px;
+            }
+            .pricing-section {
+                gap: 20px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>goDialogue</h1>
+            <p class="subtitle">KI-gestützte Avatar-Kommunikation der nächsten Generation</p>
+            <p class="description">
+                Transformieren Sie Ihre Kundenkommunikation mit intelligenten, lebensechten Avataren. 
+                goDialogue kombiniert modernste KI-Technologie mit hochauflösenden 4K-Avataren für eine 
+                einzigartige, personalisierte Kommunikationserfahrung.
+            </p>
+        </header>
+        <div class="pricing-section">
+            <!-- Plan 1: Single License -->
+            <div class="pricing-card">
+                <h2>Einzellizenz</h2>
+                <div class="price">
+                    €49
+                    <span class="price-suffix">pro Monat</span>
+                </div>
+                <div class="additional-cost">
+                    + €0,20 pro Aufruf über 100 hinaus
+                </div>
+                <ul class="features">
+                    <li><span class="highlight">1 Modell goAVA</span> aus bestehender Auswahl</li>
+                    <li><span class="highlight">4K Qualität</span> für professionelle Darstellung</li>
+                    <li>KI-Training mit bis zu <span class="highlight">25 Seiten</span> Information (PDF, min. 10pt)</li>
+                    <li>Bis zu <span class="highlight">100 Aufrufe</span> pro Monat</li>
+                    <li>1 Sprache</li>
+                </ul>
+                <div class="optional-note">
+                    Optional: Individueller goAVA aufgenommen im Studio Essen (+€2.900)
+                </div>
+                <a href="#" class="cta-button">Jetzt starten</a>
+            </div>
+            <!-- Plan 2: Professional -->
+            <div class="pricing-card">
+                <div style="text-align: center;">
+                    <span class="popular-badge">BELIEBT</span>
+                </div>
+                <h2>Professional</h2>
+                <div class="price">
+                    €149
+                    <span class="price-suffix">pro Monat</span>
+                </div>
+                <ul class="features">
+                    <li><span class="highlight">1 Modell goAVA</span> aus bestehender Auswahl</li>
+                    <li><span class="highlight">4K Qualität</span> für professionelle Darstellung</li>
+                    <li>KI-Training mit bis zu <span class="highlight">25 Seiten</span> Information (PDF, min. 10pt)</li>
+                    <li>Bis zu <span class="highlight">500 Aufrufe</span> pro Monat</li>
+                    <li><span class="highlight">2 Sprachen</span></li>
+                </ul>
+                <div class="optional-note">
+                    Optional: Individueller goAVA aufgenommen im Studio Essen (+€2.900)
+                </div>
+                <a href="#" class="cta-button">Jetzt starten</a>
+            </div>
+            <!-- Plan 3: Enterprise/KMU -->
+            <div class="pricing-card">
+                <h2>KMU Enterprise</h2>
+                <div class="price">
+                    €499
+                    <span class="price-suffix">pro Monat</span>
+                </div>
+                <ul class="features">
+                    <li><span class="highlight">Individueller goAVA</span> - Studio-Aufnahme in Essen inklusive</li>
+                    <li><span class="highlight">4K Premium Qualität</span></li>
+                    <li>Umfangreiches KI-Training mit bis zu <span class="highlight">100 Seiten</span> Information</li>
+                    <li>Unterstützt <span class="highlight">PDF, Word, PowerPoint</span> (min. 10pt)</li>
+                    <li>Bis zu <span class="highlight">2.000 Aufrufe</span> pro Monat</li>
+                    <li><span class="highlight">2 Sprachen</span></li>
+                    <li>Premium Support</li>
+                </ul>
+                <a href="#" class="cta-button">Kontakt aufnehmen</a>
+            </div>
+        </div>
+    </div>
+</body>
+</html>
